@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Portfólio profissional de Jerson Cunha: qualidade de software, liderança de QA e automação de testes.">
+  <title>Jerson Cunha — Qualidade de Software & QA</title>
+  <style>
+	:root {
+	  color-scheme: light;
+	  --paper: #f5f4ef;
+	  --white: #fffefa;
+	  --ink: #17251f;
+	  --muted: #68766e;
+	  --line: #e4e7de;
+	  --green: #1d513f;
+	  --green-dark: #173d30;
+	  --green-light: #e6eee8;
+	  --lime: #d7ed8a;
+	  --shadow: 0 16px 50px rgba(31, 58, 44, .07);
+	  --serif: Georgia, "Times New Roman", serif;
+	  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	}
+	* { box-sizing: border-box; }
+	html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+	body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; -webkit-font-smoothing: antialiased; }
+	a { color: inherit; }
+	.shell { width: min(1120px, calc(100% - 52px)); margin: 0 auto; }
+	.site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #e5e7dfd9; background: #f5f4efeF; backdrop-filter: blur(14px); }
+	.nav { display: flex; height: 70px; align-items: center; justify-content: space-between; }
+	.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+	.mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 10px; background: var(--green); color: var(--lime); font-family: var(--serif); font-size: 20px; font-weight: 700; }
+	.wordmark span:last-child { font-size: 13px; font-weight: 750; letter-spacing: -.3px; }
+	.nav-links { display: flex; align-items: center; gap: 27px; }
+	.nav-links a { color: #58665e; font-size: 12px; font-weight: 550; text-decoration: none; transition: color .18s ease; }
+	.nav-links a:hover { color: var(--green); }
+	.nav-links .nav-contact { padding: 10px 14px; border: 1px solid #cbd4ca; border-radius: 7px; color: var(--green-dark); }
+	.menu-toggle { display: none; width: 38px; height: 38px; place-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--white); color: var(--ink); }
+	.menu-toggle svg { width: 19px; height: 19px; }
+	.hero { position: relative; overflow: hidden; padding: 77px 0 61px; }
+	.hero::after { position: absolute; top: -135px; right: -145px; width: 460px; height: 460px; border: 1px solid #1d513f16; border-radius: 50%; box-shadow: 0 0 0 35px #1d513f08, 0 0 0 70px #1d513f06, 0 0 0 105px #1d513f04; content: ""; pointer-events: none; }
+	.hero-content { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr); align-items: center; gap: 60px; }
+	.kicker { display: inline-flex; align-items: center; gap: 9px; color: var(--green); font-size: 10px; font-weight: 750; letter-spacing: 1.8px; text-transform: uppercase; }
+	.kicker::before { width: 19px; height: 1px; background: var(--green); content: ""; }
+	h1 { max-width: 690px; margin: 21px 0 17px; font-family: var(--serif); font-size: clamp(46px, 7vw, 79px); font-weight: 500; letter-spacing: -3.8px; line-height: .99; }
+	h1 em { color: var(--green); font-weight: 500; }
+	.hero-copy { max-width: 560px; margin: 0; color: #66736b; font-size: 15px; line-height: 1.8; }
+	.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; margin-top: 25px; }
+	.button { display: inline-flex; min-height: 43px; align-items: center; justify-content: center; gap: 9px; padding: 0 16px; border: 1px solid transparent; border-radius: 7px; font-size: 12px; font-weight: 650; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+	.button:hover { transform: translateY(-2px); }
+	.button-primary { background: var(--green); color: #fff; }
+	.button-primary:hover { background: var(--green-dark); }
+	.button-secondary { border-color: #d8ddd4; background: #fffefa9c; color: #334a3d; }
+	.button svg { width: 15px; height: 15px; }
+	.hero-card { position: relative; max-width: 340px; justify-self: end; padding: 25px; border: 1px solid #e1e5dc; border-radius: 14px; background: var(--white); box-shadow: var(--shadow); }
+	.hero-card::before { position: absolute; top: -7px; left: 24px; width: 34px; height: 4px; border-radius: 3px; background: var(--lime); content: ""; }
+	.initials { display: grid; width: 60px; height: 60px; place-items: center; border-radius: 15px; background: var(--green-light); color: var(--green); font-family: var(--serif); font-size: 27px; }
+	.hero-card h2 { margin: 19px 0 5px; font-size: 17px; letter-spacing: -.4px; }
+	.hero-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+	.card-divider { height: 1px; margin: 19px 0; background: var(--line); }
+	.fact { display: flex; align-items: flex-start; gap: 9px; margin-top: 11px; color: #56645b; font-size: 11px; line-height: 1.5; }
+	.fact svg { width: 15px; height: 15px; flex: none; color: var(--green); }
+	.proof-band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f9f8f3; }
+	.proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+	.proof-item { min-height: 96px; padding: 22px 20px; border-right: 1px solid var(--line); }
+	.proof-item:first-child { padding-left: 0; }
+	.proof-item:last-child { border-right: 0; }
+	.proof-item strong { display: block; color: var(--green-dark); font-family: var(--serif); font-size: 26px; font-weight: 500; letter-spacing: -.4px; }
+	.proof-item span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; }
+	.section { padding: 79px 0; }
+	.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+	.section-label { margin-bottom: 8px; color: var(--green); font-size: 10px; font-weight: 750; letter-spacing: 1.7px; text-transform: uppercase; }
+	h2.section-title { margin: 0; font-family: var(--serif); font-size: clamp(31px, 4vw, 43px); font-weight: 500; letter-spacing: -1.4px; line-height: 1.1; }
+	.section-intro { max-width: 415px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+	.experience-list { position: relative; display: grid; gap: 0; }
+	.experience-list::before { position: absolute; top: 10px; bottom: 11px; left: 120px; width: 1px; background: #dce2d8; content: ""; }
+	.experience { position: relative; display: grid; grid-template-columns: 96px 1fr; gap: 48px; padding: 0 0 27px; }
+	.experience:last-child { padding-bottom: 0; }
+	.experience::before { position: absolute; top: 5px; left: 115px; width: 11px; height: 11px; border: 2px solid var(--paper); border-radius: 50%; background: var(--green); box-shadow: 0 0 0 1px #8ca594; content: ""; }
+	.date { padding-top: 3px; color: #7a887e; font-size: 10px; font-weight: 650; line-height: 1.55; }
+	.experience-body { padding: 0 0 22px; border-bottom: 1px solid var(--line); }
+	.experience:last-child .experience-body { padding-bottom: 0; border-bottom: 0; }
+	.experience-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+	.company { margin: 0; color: var(--green); font-size: 13px; font-weight: 750; }
+	.role { margin: 4px 0 0; font-size: 16px; font-weight: 650; letter-spacing: -.3px; }
+	.location-tag { padding: 5px 8px; border: 1px solid #e5e8e1; border-radius: 20px; color: #79857d; font-size: 9px; white-space: nowrap; }
+	.experience ul { display: grid; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
+	.experience li { position: relative; padding-left: 14px; color: #66736a; font-size: 11px; line-height: 1.65; }
+	.experience li::before { position: absolute; top: 8px; left: 0; width: 4px; height: 4px; border-radius: 50%; background: #85a18f; content: ""; }
+	.expertise { background: var(--green-dark); color: #fff; }
+	.expertise .section-label { color: var(--lime); }
+	.expertise .section-intro { color: #bdc9bf; }
+	.expertise h2.section-title { color: #f7f8f1; }
+	.expertise-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+	.expertise-card { min-height: 167px; padding: 19px; border: 1px solid #ffffff20; border-radius: 10px; background: #ffffff08; }
+	.expertise-icon { display: grid; width: 31px; height: 31px; place-items: center; margin-bottom: 18px; border-radius: 8px; background: #ffffff13; color: var(--lime); }
+	.expertise-icon svg { width: 16px; height: 16px; }
+	.expertise-card h3 { margin: 0 0 8px; font-size: 13px; font-weight: 650; }
+	.expertise-card p { margin: 0; color: #bfcbc2; font-size: 10px; line-height: 1.7; }
+	.toolkit { padding-top: 72px; padding-bottom: 72px; }
+	.toolkit-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: start; }
+	.toolkit .section-title { max-width: 350px; }
+	.toolkit-copy { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+	.skill-groups { display: grid; gap: 18px; }
+	.skill-group { display: grid; grid-template-columns: 116px 1fr; gap: 15px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+	.skill-group:last-child { border-bottom: 0; }
+	.skill-group h3 { margin: 5px 0 0; color: #68776d; font-size: 10px; font-weight: 700; }
+	.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+	.tag { padding: 7px 10px; border: 1px solid #e1e5dc; border-radius: 5px; background: #fffefa; color: #3c5144; font-size: 10px; }
+	.background { border-top: 1px solid var(--line); background: #f9f8f3; }
+	.background-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+	.info-card { padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+	.info-card h3 { margin: 0 0 18px; font-size: 12px; font-weight: 700; }
+	.education-item { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; border-top: 1px solid #edf0e9; }
+	.education-item:first-of-type { padding-top: 0; border-top: 0; }
+	.education-item strong { display: block; font-size: 11px; font-weight: 650; }
+	.education-item span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+	.education-year { color: #7c897e; font-size: 10px; white-space: nowrap; }
+	.cert-list { display: grid; gap: 11px; }
+	.cert { display: flex; align-items: center; gap: 10px; color: #45584b; font-size: 10px; line-height: 1.5; }
+	.cert-mark { display: grid; width: 23px; height: 23px; flex: none; place-items: center; border-radius: 7px; background: var(--green-light); color: var(--green); }
+	.cert-mark svg { width: 13px; height: 13px; }
+	.contact { padding: 75px 0; }
+	.contact-panel { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 35px 39px; border-radius: 13px; background: #e8eddf; }
+	.contact-panel::after { position: absolute; top: -100px; right: 120px; width: 240px; height: 240px; border: 1px solid #1d513f15; border-radius: 50%; box-shadow: 0 0 0 24px #1d513f08, 0 0 0 48px #1d513f06; content: ""; pointer-events: none; }
+	.contact-copy { position: relative; z-index: 1; }
+	.contact-copy .section-label { margin-bottom: 8px; }
+	.contact-copy h2 { margin: 0; font-family: var(--serif); font-size: clamp(27px, 3.5vw, 38px); font-weight: 500; letter-spacing: -1px; }
+	.contact-copy p { margin: 9px 0 0; color: #647269; font-size: 11px; }
+	.contact-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 9px; }
+	.footer { padding: 19px 0 22px; border-top: 1px solid var(--line); }
+	.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; color: #7d897f; font-size: 10px; }
+	.footer-link { color: var(--green); font-weight: 650; text-decoration: none; }
+	@media (max-width: 850px) {
+	  .hero { padding-top: 62px; }
+	  .hero-content { grid-template-columns: minmax(0, 1.15fr) minmax(220px, .85fr); gap: 28px; }
+	  .expertise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	  .experience-list::before { left: 103px; }
+	  .experience { grid-template-columns: 80px 1fr; gap: 46px; }
+	  .experience::before { left: 98px; }
+	  .toolkit-layout { grid-template-columns: .75fr 1.25fr; gap: 30px; }
+	}
+	@media (max-width: 620px) {
+	  .shell { width: min(100% - 34px, 520px); }
+	  .nav { height: 62px; }
+	  .menu-toggle { display: grid; }
+	  .nav-links { position: absolute; top: 61px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 17px 15px; border-bottom: 1px solid var(--line); background: var(--paper); }
+	  .nav-links.open { display: flex; flex-direction: column; }
+	  .nav-links a { padding: 11px 5px; }
+	  .nav-links .nav-contact { align-self: flex-start; margin-top: 4px; padding: 9px 12px; }
+	  .hero { padding: 46px 0 38px; }
+	  .hero::after { top: -190px; right: -230px; opacity: .6; }
+	  .hero-content { grid-template-columns: 1fr; gap: 28px; }
+	  h1 { max-width: 460px; margin-top: 17px; font-size: clamp(48px, 14vw, 66px); letter-spacing: -2.8px; }
+	  .hero-copy { font-size: 13px; }
+	  .hero-card { width: 100%; max-width: none; justify-self: stretch; padding: 20px; }
+	  .proof-grid { grid-template-columns: repeat(2, 1fr); }
+	  .proof-item { min-height: 80px; padding: 15px 12px; border-bottom: 1px solid var(--line); }
+	  .proof-item:nth-child(2) { border-right: 0; }
+	  .proof-item:nth-child(3), .proof-item:nth-child(4) { border-bottom: 0; }
+	  .proof-item:first-child { padding-left: 0; }
+	  .proof-item strong { font-size: 23px; }
+	  .proof-item span { font-size: 9px; }
+	  .section { padding: 58px 0; }
+	  .section-head { align-items: flex-start; flex-direction: column; gap: 11px; margin-bottom: 27px; }
+	  .section-intro { max-width: 460px; }
+	  .experience-list::before { left: 5px; }
+	  .experience { grid-template-columns: 1fr; gap: 7px; padding: 0 0 22px 24px; }
+	  .experience::before { top: 3px; left: 0; }
+	  .date { padding: 0; font-size: 9px; }
+	  .experience-body { padding-bottom: 18px; }
+	  .experience-top { flex-direction: column; gap: 8px; }
+	  .role { font-size: 14px; }
+	  .location-tag { align-self: flex-start; }
+	  .expertise-grid { gap: 9px; }
+	  .expertise-card { min-height: 155px; padding: 14px; }
+	  .expertise-card h3 { font-size: 11px; }
+	  .expertise-card p { font-size: 9px; }
+	  .toolkit-layout { grid-template-columns: 1fr; gap: 26px; }
+	  .skill-group { grid-template-columns: 94px 1fr; gap: 10px; }
+	  .tag { padding: 6px 8px; font-size: 9px; }
+	  .background-grid { grid-template-columns: 1fr; }
+	  .info-card { padding: 19px; }
+	  .contact { padding: 53px 0; }
+	  .contact-panel { align-items: flex-start; flex-direction: column; padding: 25px 20px; }
+	  .contact-actions { flex-direction: column; align-items: stretch; }
+	  .contact-actions .button { width: 100%; }
+	  .footer-inner { align-items: flex-start; flex-direction: column; }
+	}
+	@media (prefers-reduced-motion: reduce) {
+	  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+	}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+	<nav class="nav shell" aria-label="Navegação principal">
+	  <a class="wordmark" href="#inicio" aria-label="Jerson Cunha, início"><span class="mark" aria-hidden="true">J</span><span>Jerson Cunha</span></a>
+	  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+	  <div class="nav-links" id="navLinks">
+		<a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#atuacao">Atuação</a><a href="#formacao">Formação</a><a class="nav-contact" href="#contato">Contato <span aria-hidden="true">↗</span></a>
+	  </div>
+	</nav>
+  </header>
+
+  <main>
+	<section class="hero" id="inicio">
+	  <div class="hero-content shell">
+		<div>
+		  <div class="kicker">Qualidade de software · QA</div>
+		  <h1>Qualidade que<br>faz parte da <em>entrega.</em></h1>
+		  <p class="hero-copy">Sou Jerson Cunha, especialista em qualidade de software com mais de 16 anos de experiência. Uno estratégia de QA, liderança de equipes e automação para apoiar produtos mais confiáveis.</p>
+		  <div class="hero-actions">
+			<a class="button button-primary" href="#experiencia">Conheça minha trajetória <span aria-hidden="true">↓</span></a>
+			<a class="button button-secondary" href="https://www.linkedin.com/in/jerson-cunha-23357a16" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+		  </div>
+		</div>
+		<aside class="hero-card" id="sobre" aria-label="Perfil profissional">
+		  <div class="initials" aria-hidden="true">JC</div>
+		  <h2>Jerson Cunha</h2>
+		  <p>Especialista em Qualidade de Software<br>QA · Automação · Liderança</p>
+		  <div class="card-divider"></div>
+		  <div class="fact"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg><span>Carapicuíba, São Paulo, Brasil</span></div>
+		  <div class="fact"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5h16v11H4z" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="mailto:jersomhenrique@hotmail.com">jersomhenrique@hotmail.com</a></div>
+		  <div class="fact"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 12h17M12 3c2.3 2.5 3.4 5.5 3.4 9s-1.1 6.5-3.4 9c-2.3-2.5-3.4-5.5-3.4-9S9.7 5.5 12 3Z" stroke="currentColor" stroke-width="1.5"/></svg><span>Inglês básico</span></div>
+		</aside>
+	  </div>
+	</section>
+
+	<section class="proof-band" aria-label="Resumo da experiência">
+	  <div class="proof-grid shell">
+		<div class="proof-item"><strong>16+ anos</strong><span>em qualidade e testes de software</span></div>
+		<div class="proof-item"><strong>~40 QAs</strong><span>liderados em equipes multidisciplinares</span></div>
+		<div class="proof-item"><strong>Web · API · Mobile</strong><span>automação em diferentes plataformas</span></div>
+		<div class="proof-item"><strong>QA estratégico</strong><span>governança, processos e indicadores</span></div>
+	  </div>
+	</section>
+
+	<section class="section shell" id="experiencia">
+	  <div class="section-head"><div><div class="section-label">Trajetória</div><h2 class="section-title">Experiência profissional</h2></div><p class="section-intro">Uma carreira construída entre automação, qualidade funcional e liderança — em produtos e equipes de diferentes setores.</p></div>
+	  <div class="experience-list">
+		<article class="experience"><div class="date">dez. 2025 — jun. 2026</div><div class="experience-body"><div class="experience-top"><div><p class="company">Capgemini</p><h3 class="role">Consultor de Soluções Digitais IV · Governança de QA</h3></div><span class="location-tag">Cliente Bradesco</span></div><ul><li>Governança de QA e criação de procedimentos de qualidade.</li><li>Automação de APIs com Java e REST Assured; automação Web com Selenium WebDriver.</li><li>Uso de IA para produtividade, treinamento de equipes e gestão de indicadores.</li><li>Atuação com Jira, Xray e Confluence em produtos bancários.</li></ul></div></article>
+		<article class="experience"><div class="date">mar. 2022 — out. 2025</div><div class="experience-body"><div class="experience-top"><div><p class="company">Tata Consultancy Services</p><h3 class="role">Especialista em Qualidade de Software · Chapter Lead QA</h3></div><span class="location-tag">Liderança de QA</span></div><ul><li>Liderança de aproximadamente 40 QAs, incluindo equipes de automação e testes manuais.</li><li>Automação Web e Backend com Java, Selenium e REST Assured; experiência adicional com Playwright e JavaScript.</li><li>Planejamento da automação por Sprint, integração com pipelines e apoio a testes de regressão.</li><li>Análise de incidentes, causa raiz e planos de ação; planejamento, execução e evidências de testes no ALM.</li></ul></div></article>
+		<article class="experience"><div class="date">abr. 2021 — mar. 2022</div><div class="experience-body"><div class="experience-top"><div><p class="company">Capgemini</p><h3 class="role">Consultor de Soluções Digitais IV · Arquiteto de Testes</h3></div><span class="location-tag">Bradesco · Via Varejo</span></div><ul><li>Liderança de 25 QAs em testes funcionais e automação.</li><li>Estimativas, roteiros, execução, evidências e registro de bugs em aplicações Web e Mobile.</li><li>Automação Mobile com Appium, Ruby e Cucumber/Capybara em produtos bancários e de varejo.</li></ul></div></article>
+		<article class="experience"><div class="date">fev. 2021 — mar. 2021</div><div class="experience-body"><div class="experience-top"><div><p class="company">Qintess</p><h3 class="role">Automatizador de Testes Sênior</h3></div><span class="location-tag">Santander</span></div><ul><li>Automação funcional Web com Java, Selenium, Page Object/PageFactory, Eclipse e GitLab.</li></ul></div></article>
+		<article class="experience"><div class="date">out. 2019 — nov. 2020</div><div class="experience-body"><div class="experience-top"><div><p class="company">BRQ Digital Solutions</p><h3 class="role">Analista de Testes e Automação Sênior</h3></div></div><ul><li>Criação e execução de cenários de testes, abertura e acompanhamento de bugs.</li><li>Testes e regressão de aplicação mobile; transferência de conhecimento para QAs do cliente next.</li></ul></div></article>
+		<article class="experience"><div class="date">jul. 2018 — out. 2019</div><div class="experience-body"><div class="experience-top"><div><p class="company">Yaman</p><h3 class="role">Automatizador de Testes Pleno</h3></div><span class="location-tag">B3 · Itaú · REDE</span></div><ul><li>Automação Web e API com C#, Java e Ruby.</li><li>Testes funcionais com Shell Script, JMeter e banco de dados Oracle.</li></ul></div></article>
+		<article class="experience"><div class="date">ago. 2015 — jul. 2018</div><div class="experience-body"><div class="experience-top"><div><p class="company">ProPay S.A.</p><h3 class="role">Analista de Testes Pleno / Júnior</h3></div></div><ul><li>Liderança de automação e suporte; testes regressivos e unitários com Selenium WebDriver, C# e Visual Studio.</li><li>Testes Web/Desktop, funcionais, unitários, integrados e caixa-preta; gestão de bugs, homologação e SQL Server.</li><li>Atuação com Scrum e Kanban, incluindo atividades de Testes, Suporte e Product Owner.</li></ul></div></article>
+		<article class="experience"><div class="date">nov. 2011 — mar. 2015</div><div class="experience-body"><div class="experience-top"><div><p class="company">IS2B</p><h3 class="role">QA Test Analyst</h3></div></div><ul><li>Testes de aplicações Web, Desktop e POS, incluindo testes funcionais, não funcionais, unitários e integrados.</li><li>Preparação de homologação, suporte de segundo nível, documentação, treinamento e monitoramento de KPIs.</li></ul></div></article>
+		<article class="experience"><div class="date">mar. 2011 — mai. 2011</div><div class="experience-body"><div class="experience-top"><div><p class="company">Stefanini</p><h3 class="role">Analista de Sistemas</h3></div></div><ul><li>Criação de roteiros a partir de protótipos e requisitos; testes unitários, integrados, caixa-preta e método Top Down.</li></ul></div></article>
+	  </div>
+	</section>
+
+	<section class="section expertise" id="atuacao">
+	  <div class="shell"><div class="section-head"><div><div class="section-label">Como posso contribuir</div><h2 class="section-title">Qualidade em toda a entrega.</h2></div><p class="section-intro">Experiência técnica e visão de processo para incorporar qualidade ao ciclo de desenvolvimento.</p></div>
+		<div class="expertise-grid">
+		  <article class="expertise-card"><span class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Estratégia & governança</h3><p>Processos de QA, planejamento, indicadores de qualidade e melhoria contínua.</p></article>
+		  <article class="expertise-card"><span class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-14-4 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Automação Web & API</h3><p>Java, Selenium WebDriver, REST Assured, Playwright, C# e Ruby.</p></article>
+		  <article class="expertise-card"><span class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="2.8" width="12" height="18.4" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M10 18h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Testes Mobile</h3><p>Experiência em automação mobile e testes funcionais com Appium, Ruby e Cucumber/Capybara.</p></article>
+		  <article class="expertise-card"><span class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 20c.5-3.2 2.3-5 5.5-5s5 1.8 5.5 5m1-14a3 3 0 0 1 0 5.8M17 15c2.1.6 3.3 2.1 3.6 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Liderança & capacitação</h3><p>Desenvolvimento de QAs, liderança técnica e colaboração com times multidisciplinares.</p></article>
+		</div>
+	  </div>
+	</section>
+
+	<section class="section toolkit shell" aria-labelledby="toolkitTitle">
+	  <div class="toolkit-layout"><div><div class="section-label">Caixa de ferramentas</div><h2 class="section-title" id="toolkitTitle">Prática e método, lado a lado.</h2><p class="toolkit-copy">Tecnologias, ferramentas e práticas presentes na experiência profissional descrita no currículo.</p></div>
+		<div class="skill-groups">
+		  <div class="skill-group"><h3>Automação</h3><div class="tags"><span class="tag">Java</span><span class="tag">Selenium WebDriver</span><span class="tag">REST Assured</span><span class="tag">Playwright</span><span class="tag">Appium</span><span class="tag">C#</span><span class="tag">Ruby</span><span class="tag">Cucumber / Capybara</span></div></div>
+		  <div class="skill-group"><h3>Ferramentas</h3><div class="tags"><span class="tag">Jira</span><span class="tag">Xray</span><span class="tag">Confluence</span><span class="tag">ALM</span><span class="tag">Zephyr</span><span class="tag">Git</span><span class="tag">GitLab</span><span class="tag">Bitbucket</span><span class="tag">JMeter</span></div></div>
+		  <div class="skill-group"><h3>Práticas</h3><div class="tags"><span class="tag">Agile / Scrum</span><span class="tag">Kanban</span><span class="tag">Testes funcionais</span><span class="tag">Regressão</span><span class="tag">Integração</span><span class="tag">Testes não funcionais</span><span class="tag">Análise de causa raiz</span></div></div>
+		</div>
+	  </div>
+	</section>
+
+	<section class="section background" id="formacao">
+	  <div class="shell"><div class="section-head"><div><div class="section-label">Formação</div><h2 class="section-title">Base para seguir evoluindo.</h2></div></div>
+		<div class="background-grid">
+		  <article class="info-card"><h3>Formação acadêmica</h3><div class="education-item"><div><strong>Análise e Desenvolvimento de Sistemas</strong><span>Centro Universitário FIEO</span></div><span class="education-year">2008–2011</span></div><div class="education-item"><div><strong>Administração</strong><span>ETEC — Escola Técnica Estadual de São Paulo</span></div><span class="education-year">2006–2007</span></div></article>
+		  <article class="info-card"><h3>Certificações & cursos</h3><div class="cert-list"><div class="cert"><span class="cert-mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>DevOps (DEPC)</div><div class="cert"><span class="cert-mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Formação em Teste de Software</div><div class="cert"><span class="cert-mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Scrum Fundamentals Certified</div></div></article>
+		</div>
+	  </div>
+	</section>
+
+	<section class="contact shell" id="contato"><div class="contact-panel"><div class="contact-copy"><div class="section-label">Vamos conversar</div><h2>Qualidade é trabalho em equipe.</h2><p>Entre em contato ou conheça mais da minha trajetória profissional.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:jersomhenrique@hotmail.com"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5h16v11H4z" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Enviar e-mail</a><a class="button button-secondary" href="https://www.linkedin.com/in/jerson-cunha-23357a16" target="_blank" rel="noopener noreferrer">Ver perfil no LinkedIn <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="footer-inner shell"><span>© <span id="year">2026</span> Jerson Cunha · Qualidade de Software & QA</span><a class="footer-link" href="#inicio">Voltar ao início ↑</a></div></footer>
+  <script>
+	(() => {
+	  const menuToggle = document.getElementById('menuToggle');
+	  const navLinks = document.getElementById('navLinks');
+	  menuToggle.addEventListener('click', () => {
+		const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+		menuToggle.setAttribute('aria-expanded', String(!isOpen));
+		menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+		navLinks.classList.toggle('open', !isOpen);
+	  });
+	  navLinks.querySelectorAll('a').forEach((link) => {
+		link.addEventListener('click', () => {
+		  navLinks.classList.remove('open');
+		  menuToggle.setAttribute('aria-expanded', 'false');
+		  menuToggle.setAttribute('aria-label', 'Abrir menu');
+		});
+	  });
+	  document.getElementById('year').textContent = String(new Date().getFullYear());
+	})();
+  </script>
+</body>
+</html>
